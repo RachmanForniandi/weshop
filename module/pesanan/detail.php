@@ -55,4 +55,59 @@
         </tr>
    </table>
 </div>
+
+<table class="table-list">
+    
+    	<tr class="baris-title">
+        	<th class="no">No</th>
+            <th class="kiri">Nama Barang</th>
+            <th class="tengah">Qty</th>
+            <th class="kanan">Harga Satuan</th>
+            <th class="kanan">Total</th>
+         </tr>
+         <?php
+		 
+		 	$queryDetail = mysqli_query($koneksi, "SELECT pesanan_detail.*, barang.nama_barang FROM pesanan_detail JOIN barang ON pesanan_detail.barang_id=barang.barang_id WHERE pesanan_detail.pesanan_id='$pesanan_id'");
+			
+			$no=1;
+			$subtotal = 0;
+			while($rowDetail= mysqli_fetch_assoc($queryDetail)){
+				
+				$total = $rowDetail["harga"] * $rowDetail["quantity"];
+				$subtotal = $subtotal + $total;
+				
+				echo "<tr>
+						<td class='no'>$no</td>
+						<td class='kiri'>$rowDetail[nama_barang]</td>
+						<td class='tengah'>$rowDetail[quantity]</td>
+						<td class='kanan'>".rupiah($rowDetail["harga"])."</td>
+						<td class='kanan'>".rupiah($total)."</td>
+					</tr>";
+					
+					$no++;
+			}
+			
+			$subtotal = $subtotal + $tarif;
+		 
+		 ?>
+         
+         <tr>
+         	<td class="kanan" colspan="4">Biaya Pengiriman</td>
+            <td class="kanan"><?php echo rupiah($tarif); ?></td>
+         </tr>
+         
+         <tr>
+         	<td class="kanan" colspan="4"><b>Sub total</b></td>
+            <td class="kanan"><b><?php echo rupiah($subtotal); ?></b></td>
+         </tr>
+   
+   </table>
+   
+   <div id="frame-keterangan-pembayaran">
+   		<p>Silahkan lakukan pembayaran ke No Rekening Bank BCA<br/>
+        No Rekening: 0000-7777-8888(A/N Weshop).<br/>
+        Setelah melakukan pembayaran silahkan lakukan konfirmasi pembayaran
+     <a href="<?php echo BASE_URL."index.php?page=my_profile&module=pesanan&action=konfirmasi_pembayaran&pesanan_id=$pesanan_id"?>">Disini</a>.
+        </p>
+   </div>
 	
