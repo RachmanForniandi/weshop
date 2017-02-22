@@ -28,8 +28,7 @@ function kategori($kategori_id = false){
 					$string .=  "<li><a href='".BASE_URL."index.php?kategori_id=$row[kategori_id]'>$row[kategori]</a></li>";
 					}
 				}
-			
-            
+			      
     	$string .= "</ul>";        
     $string .= "</div>";
 	
