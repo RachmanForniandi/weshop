@@ -7,6 +7,12 @@
 		header("location: ".BASE_URL."index.php?page=login");
 	}
 
+    if($level != "superadmin"){
+       $admin_pages = array("kategori" , "barang", "kota", "banner");
+        if(in_array($module, $admin_pages)){
+            header("location: ".BASE_URL);
+        }
+    }
 ?>
 
 <div id="bg-page-profile">
