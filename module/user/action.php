@@ -1,6 +1,8 @@
 <?php
     include("../../function/koneksi.php");   
-    include("../../function/helper.php");   
+    include("../../function/helper.php");  
+
+    admin_only("user", $level); 
      
     $user_id = $_GET['user_id'];
 	
