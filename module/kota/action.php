@@ -18,4 +18,4 @@
 												status='$status' WHERE kota_id='$kota_id'");
 	}
 	
-	header("location:" .BASE_URL."index.php?page=my_profile&module=kota&action=list");
+	header("location:" .BASE_URL."index.php?page=my-profile&module=kota&action=list");

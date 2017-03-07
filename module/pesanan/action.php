@@ -39,5 +39,5 @@
 		}
 	}
 	
-	header("location:".BASE_URL."index.php?page=my_profile&module=pesanan&action=list");
+	header("location:".BASE_URL."index.php?page=my-profile&module=pesanan&action=list");
 ?>

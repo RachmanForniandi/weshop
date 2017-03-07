@@ -30,7 +30,7 @@
                         <td>$rowUser[phone]</td>
                         <td>$rowUser[level]</td>
                         <td class='tengah'>$rowUser[status]</td>
-                        <td class='tengah'><a class='tombol-action' href='".BASE_URL."index.php?page=my_profile&module=user&action=form&user_id=$rowUser[user_id]"."'>Edit</a></td>
+                        <td class='tengah'><a class='tombol-action' href='".BASE_URL."index.php?page=my-profile&module=user&action=form&user_id=$rowUser[user_id]"."'>Edit</a></td>
                      </tr>";
               
                 $no++;

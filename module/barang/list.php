@@ -1,5 +1,5 @@
 <div id="frame-tambah">
-	<a href="<?php echo BASE_URL."index.php?page=my_profile&module=barang&action=form"; ?>" class="tombol-action">+ Tambah Barang</a>
+	<a href="<?php echo BASE_URL."index.php?page=my-profile&module=barang&action=form"; ?>" class="tombol-action">+ Tambah Barang</a>
 </div>
 
 <?php 
@@ -29,7 +29,7 @@
 				<td class='kiri'>".rupiah($row["harga"])."</td>
 				<td class='tengah'>$row[status]</td>
 				<td class='tengah'>
-					<a class= 'tombol-action' href='".BASE_URL."index.php?page=my_profile&module=barang&action=form&barang_id=$row[barang_id]'>Edit</a>
+					<a class= 'tombol-action' href='".BASE_URL."index.php?page=my-profile&module=barang&action=form&barang_id=$row[barang_id]'>Edit</a>
 				</td>
 			  </tr>";
 			  

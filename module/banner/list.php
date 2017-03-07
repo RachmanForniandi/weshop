@@ -1,5 +1,5 @@
 <div id="frame-tambah">
-	<a class="tombol-action" href="<?php echo BASE_URL."index.php?page=my_profile&module=banner&action=form"; ?>">+ Tambah Banner</a>
+	<a class="tombol-action" href="<?php echo BASE_URL."index.php?page=my-profile&module=banner&action=form"; ?>">+ Tambah Banner</a>
 </div>
 
 <?php
@@ -30,7 +30,7 @@
                         <td>$rowBanner[banner]</td>
                         <td><a target='blank' href='".BASE_URL."$rowBanner[link]'>$rowBanner[link]</a></td>
                         <td class='tengah'>$rowBanner[status]</td>
-                        <td class='tengah'><a class='tombol-action' href='".BASE_URL."index.php?page=my_profile&module=banner&action=form&banner_id=$rowBanner[banner_id]"."'>Edit</a></td>
+                        <td class='tengah'><a class='tombol-action' href='".BASE_URL."index.php?page=my-profile&module=banner&action=form&banner_id=$rowBanner[banner_id]"."'>Edit</a></td>
                      </tr>";
                 
                 $no++;

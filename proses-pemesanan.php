@@ -13,8 +13,7 @@
 	$user_id = $_SESSION['user_id'];
 	$waktu_saat_ini = date("Y-m-d H:i:s");
 	
-	$query = mysqli_query($koneksi, "INSERT INTO pesanan (nama_penerima, user_id, nomor_telepon, kota_id, alamat, tanggal_pemesanan, status)
-												VALUES ('$nama_penerima', '$user_id', '$nomor_telepon', '$kota', '$alamat', '$waktu_saat_ini', '0')");
+	$query = mysqli_query($koneksi, "INSERT INTO pesanan (nama_penerima, user_id, nomor_telepon, kota_id, alamat, tanggal_pemesanan, status)VALUES ('$nama_penerima', '$user_id', '$nomor_telepon', '$kota', '$alamat', '$waktu_saat_ini', '0')");
 												
 	if($query){
 		$last_pesanan_id = mysqli_insert_id($koneksi);
@@ -32,6 +31,6 @@
 		
 		unset($_SESSION["keranjang"]);
 		
-		header("location:".BASE_URL."index.php?page=my_profile&module=pesanan&action=detail&pesanan_id=$last_pesanan_id");
+		header("location:".BASE_URL."index.php?page=my-profile&module=pesanan&action=detail&pesanan_id=$last_pesanan_id");
 	}
 ?>

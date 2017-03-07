@@ -19,5 +19,5 @@
 											   status='$status'
 											   WHERE user_id='$user_id'");
 
-    header("location: ".BASE_URL."index.php?page=my_profile&module=user&action=list");
+    header("location: ".BASE_URL."index.php?page=my-profile&module=user&action=list");
 ?>

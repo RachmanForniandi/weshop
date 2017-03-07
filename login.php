@@ -7,7 +7,7 @@
 
 <div id="container-user-akses">
 
-	<form action="<?php echo BASE_URL."proses_login.php"; ?> " method="POST">
+	<form action="<?php echo BASE_URL."proses-login.html"; ?> " method="POST">
     
     <?php
 		$notif = isset($_GET['notif']) ? $_GET['notif']: false;

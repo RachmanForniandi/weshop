@@ -14,7 +14,7 @@
 													status ='$status' WHERE kategori_id= '$kategori_id'");
 	}
 
-	header("location:".BASE_URL."index.php?page=my_profile&module=kategori&action=list");
+	header("location:".BASE_URL."index.php?page=my-profile&module=kategori&action=list");
 	
 
 ?>

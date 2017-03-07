@@ -2,7 +2,7 @@
 	if($user_id == false){
 		$_SESSION["proses_pesanan"]= true;
 		
-		header("location: ".BASE_URL."index.php?page=login");
+		header("location: ".BASE_URL."login.html");
 		exit;
 		}
 ?>
@@ -13,7 +13,7 @@
     
     <div id="frame-form-pengiriman">
     	
-        <form action="<?php echo BASE_URL."proses_pemesanan.php"; ?>" method="POST">
+        <form action="<?php echo BASE_URL."proses-pemesanan.html"; ?>" method="POST">
         
             <div class="element-form">
                     <label>Nama Penerima</label>

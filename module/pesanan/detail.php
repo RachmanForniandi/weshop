@@ -107,7 +107,7 @@
    		<p>Silahkan lakukan pembayaran ke No Rekening Bank BCA<br/>
         No Rekening: 0000-7777-8888(A/N Weshop).<br/>
         Setelah melakukan pembayaran silahkan lakukan konfirmasi pembayaran
-     <a href="<?php echo BASE_URL."index.php?page=my_profile&module=pesanan&action=konfirmasi_pembayaran&pesanan_id=$pesanan_id"?>">Disini</a>.
+     <a href="<?php echo BASE_URL."index.php?page=my-profile&module=pesanan&action=konfirmasi_pembayaran&pesanan_id=$pesanan_id"?>">Disini</a>.
         </p>
    </div>
 	

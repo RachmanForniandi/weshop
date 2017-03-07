@@ -33,5 +33,5 @@
     }
      
      
-    header("location: ".BASE_URL."index.php?page=my_profile&module=banner&action=list");
+    header("location: ".BASE_URL."index.php?page=my-profile&module=banner&action=list");
 ?>

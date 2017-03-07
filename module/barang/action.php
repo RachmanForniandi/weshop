@@ -35,6 +35,6 @@
 												  $update_gambar WHERE barang_id='$barang_id'");
 	}
 
-	header("location:".BASE_URL."index.php?page=my_profile&module=barang&action=list");
+	header("location:".BASE_URL."index.php?page=my-profile&module=barang&action=list");
 	
 

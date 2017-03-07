@@ -22,7 +22,7 @@
 	$adminButton = "";	
 	while($row= mysqli_fetch_assoc($queryPesanan)){
 		if($level == "superadmin"){
-			$adminButton="<a class='tombol-action' href='".BASE_URL."index.php?page=my_profile&module=pesanan&action=status&pesanan_id=$row[pesanan_id]'>Update Status</a>";	
+			$adminButton="<a class='tombol-action' href='".BASE_URL."index.php?page=my-profile&module=pesanan&action=status&pesanan_id=$row[pesanan_id]'>Update Status</a>";	
 			}
 			
 		$status = $row['status'];	
@@ -31,7 +31,7 @@
 				<td class='kiri'>$arrayStatusPesanan[$status]</td>
 				<td class='kiri'>$row[nama]</td>
 				<td class='kiri'>
-				<a class='tombol-action' href='".BASE_URL."index.php?page=my_profile&module=pesanan&action=detail&pesanan_id=$row[pesanan_id]'>Detail Pesanan</a>
+				<a class='tombol-action' href='".BASE_URL."index.php?page=my-profile&module=pesanan&action=detail&pesanan_id=$row[pesanan_id]'>Detail Pesanan</a>
 				$adminButton
 				</td>	
 			</tr>";

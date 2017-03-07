@@ -1,5 +1,5 @@
 <div id="frame-tambah">
-	<a class="tombol-action" href="<?php echo BASE_URL."index.php?page=my_profile&module=kota&action=form"; ?>">+ Tambah Kota</a>
+	<a class="tombol-action" href="<?php echo BASE_URL."index.php?page=my-profile&module=kota&action=form"; ?>">+ Tambah Kota</a>
 </div>
 
 <?php
@@ -28,7 +28,7 @@
 						<td>".rupiah($rowKota['tarif'])."</td>
 						<td class='tengah'>$rowKota[status]</td>
 						<td class='tengah'>
-							<a class='tombol-action' href='".BASE_URL."index.php?page=my_profile&module=kota&action=form&kota_id=$rowKota[kota_id]"."'>Edit</a>
+							<a class='tombol-action' href='".BASE_URL."index.php?page=my-profile&module=kota&action=form&kota_id=$rowKota[kota_id]"."'>Edit</a>
 						</td>
 					 </tr>";
 				
