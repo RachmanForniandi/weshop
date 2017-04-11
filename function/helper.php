@@ -46,21 +46,48 @@ function kategori($kategori_id = false){
 	}
 
 	function pagination($query, $data_per_halaman, $pagination, $url){
-	global $koneksi;
-	$queryHitungKategori= mysqli_query($koneksi,$query);
-	$total_data= mysqli_num_rows($queryHitungKategori);
-	$total_halaman= ceil($total_data/$data_per_halaman);
+		global $koneksi;
+		$queryHitungKategori= mysqli_query($koneksi,$query);
+		$total_data= mysqli_num_rows($queryHitungKategori);
+		$total_halaman= ceil($total_data/$data_per_halaman);
 
-	echo "<ul class='pagination'>";
-	for($i =1; $i<=$total_halaman; $i++){
-		if ($pagination == $i){
-		echo "<li><a class='active' href='".BASE_URL."$url&pagination=$i'>$i</a></li>";
-		}else{
-		echo "<li><a href='".BASE_URL."$url&pagination=$i'>$i</a></li>";
+		$batasPosisiNomor = 6;
+		$batasJumlahHalaman = 10;
+		$mulaiPagination = 1;
+		$batasAkhirPagination = $total_halaman;
+
+		echo "<ul class='pagination'>";
+
+		if($pagination > 1){
+			$prev = $pagination -1;
+			echo "<li><a href='".BASE_URL."$url&pagination=$prev'><< prev</a></li>";
 		}
-	}
-	echo "</ul>";
-	}
+		if($total_halaman >= $batasJumlahHalaman){
+
+		if($pagination > $batasPosisiNomor){
+			$mulaiPagination = $pagination -($batasPosisiNomor-1);
+		}
+		
+		$batasAkhirPagination = ($mulaiPagination-1) + $batasJumlahHalaman;
+		if($batasAkhirPagination > $total_halaman){
+			$batasAkhirPagination = $total_halaman;
+			}
+		}
+
+		for($i =$mulaiPagination; $i<=$batasAkhirPagination; $i++){
+			if ($pagination == $i){
+			echo "<li><a class='active' href='".BASE_URL."$url&pagination=$i'>$i</a></li>";
+			}else{
+			echo "<li><a href='".BASE_URL."$url&pagination=$i'>$i</a></li>";
+			}
+		}
+
+		if($pagination < $total_halaman){
+			$prev = $pagination +1;
+			echo "<li><a href='".BASE_URL."$url&pagination=$prev'> prev >> </a></li>";
+		}
+		echo "</ul>";
+		}
 
 ?>
 
