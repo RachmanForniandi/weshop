@@ -185,7 +185,7 @@ body{
 
 #frame-tambah {
   margin-bottom: 10px;
-  text-align: right;
+  overflow: hidden;
 }
 
 .tombol-action {
@@ -197,6 +197,7 @@ body{
   text-decoration: none;
   margin-right: 3px;
   font-size: 9px;
+  display: block;
 }
 
 #kiri {
@@ -437,7 +438,16 @@ ul.pagination li a {
 ul.pagination li a:hover{
   font-weight: bold;
 }
+
 ul.pagination li a.active{
 	background: #1e5475;
   color: white;
+}
+
+#frame-tambah #left {
+    float: left;
+}
+
+#frame-tambah #right {
+    float: right;
 }
